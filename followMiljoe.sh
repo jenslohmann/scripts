@@ -16,7 +16,7 @@ miljoe=${1:-preprod}
 # - sambadrev
 . followEnv
 
-if [ -z "${systemer}" || -z "${mountpoint}" ]; then
+if [ -z "${systemer}" ] || [ -z "${mountpoint}" ]; then
     exit 1
 fi
 
