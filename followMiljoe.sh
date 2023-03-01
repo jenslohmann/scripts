@@ -59,7 +59,7 @@ tailSystem() {
 
     for maskine in ${maskiner}; do
         postfix=$(echo ${maskine}|cut -d- -f3)
-        ${command} "tail -F ${folder}/${maskine}/${system}.${idag}.log > ${rod}/${system}.${idag}.${postfix}.log"
+        ${command} "tail -F ${folder}/${maskine}/${system}.${idag}.log | tee ${rod}/${system}.${idag}.${postfix}.log"
         command=newTab
     done
 }
